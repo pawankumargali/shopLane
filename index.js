@@ -10,7 +10,7 @@ $(document).ready(function() {
     $.get(API_ENDPOINT)
         .then(products => {
             for(const product of products) {
-                console.log(product);
+                // console.log(product);
                 const { id, brand, name, preview, price, isAccessory } = product;
                 const productCard = createProductCard(id, preview, name, brand, price);
                 if(isAccessory) 
