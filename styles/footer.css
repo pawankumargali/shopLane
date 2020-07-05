@@ -7,6 +7,7 @@ footer  {
     background-color: #1C1B1E;
     color:#fff;
     font-weight: 600;
+    width:100%;
 }
 
 footer > div > h4 {
@@ -18,6 +19,8 @@ footer > div > h4 {
 }
 
 footer > div > a {
+   text-decoration: none;
+   color:inherit;
    display: block;
    margin-top: 12px;
    font-size: 14px;
@@ -31,4 +34,15 @@ footer > div > a {
     right: 5%;
     width: 128px;
     z-index: 1;
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer > div {
+        margin-bottom:24px;
+    }
 }

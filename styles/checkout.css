@@ -70,7 +70,7 @@ section > h5 {
 
 
 #order-card {
-    width: 45%;
+    width: 50%;
     margin-left:3%;
     padding:16px;
     box-sizing: border-box;
@@ -108,4 +108,23 @@ section > h5 {
     padding:18px 36px;
     border-radius: 6px;
     font-weight: 600;
+}
+
+#error-div {
+    display: none;
+    margin-top:16px;
+    width:100%;
+    font-weight: 600;
+    color:red;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #checkout-info {
+        flex-direction: column;
+    }
+
+    #checkout-items, #order-card { width:100%;}
+
 }

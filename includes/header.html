@@ -4,9 +4,9 @@
     <a class="nav-item" href="../index.html#clothing-section">CLOTHING</a>
     <a class="nav-item" href="../index.html#accessory-section">ACCESSORIES</a>
 
-    <div> 
+    <div id="search-div">  
         <i class="fa fa-search"></i>
-        <input id="search-bar" type="text" placeholder="Search for Clothing"/>
+        <input class="search-bar" type="text" placeholder="Search for Clothing"/>
     </div>
 
     <div>
@@ -16,8 +16,20 @@
             </a>
             <div id="order-count"><span>0</span></div>
         </div>
-    <div> <img id="profile-img" src="https://test-hosting-8f9bf.web.app/assets/avatar.jpg" /></div>
+        <div> <img id="profile-img" src="https://test-hosting-8f9bf.web.app/assets/avatar.jpg" /></div>
+        <div id="collapsible-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
+
+   
+    <div id="collapsible-menu">
+        <a class="nav-item-collapsible" href="../index.html#clothing-section">CLOTHING</a>
+        <a class="nav-item-collapsible" href="../index.html#accessory-section">ACCESSORIES</a>
+        <div id="collapsible-close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div id="collapsible-search-div"> 
+            <input class="search-bar" type="text" placeholder="Search"/> 
+            <i class="fa fa-search"></i>
+        </div>
+    </div> 
     <script type="text/javascript" src="./lib/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../scripts/header.js"></script>
 </body>

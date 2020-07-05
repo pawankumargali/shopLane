@@ -5,4 +5,13 @@ $(document).ready(function() {
      count=order.count;  
     }
     $('#order-count span').text(count);
+
+    $('#collapsible-btn').click(function() {
+            $('#collapsible-menu').css('display', 'block');
+    });
+
+    $('#collapsible-close-btn').click(function() {
+        $('#collapsible-menu').css('display', 'none');
+    })
+
 });

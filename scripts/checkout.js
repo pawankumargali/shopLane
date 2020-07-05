@@ -16,6 +16,24 @@ $(document).ready(function() {
     }
     $('#item-count').text(itemCount);
     $('#total-amt').text(totalAmt);
+
+    const placedOrder = {products:order.products, bill:totalAmt};
+    $('#place-order-btn').click(function() {
+        $('#error-div').css('display', 'none');
+        $.ajax({
+            type: "POST",
+            url:'https://5f0224d59e41230016d42bb5.mockapi.io/order/',
+            data: JSON.stringify(placedOrder),
+            success: function(res) {
+                // console.log(res);
+                localStorage.removeItem('order');
+                window.location.href = './confirmation.html';
+            },
+            error: function() {
+                $('#error-div').css('display','block');
+            }
+          });
+    })
 });
 
 

@@ -78,3 +78,23 @@ body {
     
 }
 /* Product Section End */
+
+
+
+/*Mobile Responsive */
+@media (max-width:768px) {
+    .product-container {
+        flex-direction: column;
+    }
+    
+    .product {
+        width:80%;
+        margin-bottom: 20px;
+    }
+    
+    .product-meta {
+        min-height:auto;
+    }
+
+}
+

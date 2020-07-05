@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     padding:16px 8%;
     box-sizing: border-box;
     box-shadow: 0 2px 5px #ccc;;
@@ -30,7 +30,7 @@ header div {
     align-items: center;
 }
 
-.fa-search {
+#search-div .fa-search {
     position: relative;
     top:0;
     left:45px;
@@ -39,7 +39,7 @@ header div {
 }
 
 
-#search-bar {
+#search-div .search-bar {
     outline: none;
     border:none;
     text-align: left;
@@ -49,11 +49,7 @@ header div {
     background-color: #F5F2F2;
 }
 
-@media(min-width:991px) {
-    #search-bar { width:326px; }
-}
-
-#search-bar::placeholder { text-align: left; }
+.search-bar::placeholder { text-align: left; }
 
 #order-count {
     position: relative;
@@ -74,4 +70,98 @@ header div {
     font-size: 12px;
 }
 
-#profile-img { margin-left: 30px; width:50px; border-radius: 50%;}
+#profile-img { margin-left: 30px; margin-right: 30px; width:50px; border-radius: 50%;}
+
+
+#collapsible-btn { 
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#collapsible-menu {
+    position: fixed;
+    min-width: 300px;
+    width:50vw;
+    height:100vh;
+    left:0px;
+    top:0px;
+    display:none;
+    background-color: #000;
+    padding-top:80px;
+    padding-bottom:20px;
+    z-index:999;
+}
+
+#collapsible-close-btn {
+    cursor: pointer;
+    position: absolute;
+    right:10px;
+    top:10px;
+    font-size: 20px;
+    color:#fff;
+
+}
+
+#collapsible-close-btn:hover {
+    background-color: red;
+    padding:5px;
+}
+.nav-item-collapsible {
+    width:100%;
+    padding:5% 10%;
+    display: block;
+    font-weight: 400px; 
+    font-weight: bold;
+    color:#fff;
+    box-sizing: border-box;
+}
+
+.nav-item-collapsible:hover {
+    background-color: #009688;
+}
+
+#collapsible-search-div {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    padding:5% 10%;
+    box-sizing: border-box;
+}
+
+#collapsible-search-div .fa-search {
+    color: #F5F2F2;
+    padding:2% 5%;
+
+}
+
+#collapsible-search-div .search-bar {
+    outline: none;
+    border:none;
+    text-align: left;
+    width:100%;
+    height:30px;
+    background-color: #F5F2F2;
+}
+
+
+/* Mobile Responsive */
+
+@media(min-width:991px) {
+    .search-bar { width:326px; }
+}
+
+
+@media (max-width:768px) {
+    .nav-item, #search-div { display: none; }
+
+    #profile-img { cursor:pointer; }
+
+    #collapsible-btn { display: block;}
+}
+
+@media (max-width:480px) {
+    header { padding:16px 2%; justify-content: space-evenly;}
+    #logo { font-size:  32px;}
+}
