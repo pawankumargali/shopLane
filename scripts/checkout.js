@@ -3,20 +3,19 @@ $(document).ready(function() {
     $('footer').load('../includes/footer.html');
 
     let order = JSON.parse(localStorage.getItem('order'));
+    let itemCount=0;
+    let totalAmt = 0;
     if(order) {
-        const productCount = 0;
         for(const product of order.products) {
             const {name, qty, price, preview} = product;
+            itemCount+=1;
+            totalAmt+=Number(qty*price);
             const checkoutItem = createCheckoutItem(preview, name, qty, price);
             $('#checkout-items').append(checkoutItem);
-            productCount++;
-        }
-        $('#item-count').text(productCount);
+        } 
     }
-    else {
-        $('#item-count').text(0);
-    }
-    
+    $('#item-count').text(itemCount);
+    $('#total-amt').text(totalAmt);
 });
 
 
