@@ -61,7 +61,7 @@ section > h5 {
 }
 
 .product-info {
- min-width:100%;
+    width:100%;
 }
 
 .product-name { 
@@ -127,4 +127,5 @@ section > h5 {
 
     #checkout-items, #order-card { width:100%;}
 
+    #order-card {margin-left:0;}
 }
